@@ -1,0 +1,23 @@
+.movie {
+    border: 1px solid black;
+    border-radius: 1px;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .movie img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .movie h2 {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .movie p {
+    font-size: 10px;
+    color: #666;
+    text-align: center;
+  }

@@ -1,0 +1,28 @@
+.search-input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    justify-content: center;
+
+  }
+
+
+  .search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+
+    margin: 10px;
+    justify-content: center;
+  }
+
+
+  .search-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
