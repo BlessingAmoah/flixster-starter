@@ -1,0 +1,12 @@
+.filter-dropdown {
+  padding: 3px;
+  font-size: 16px;
+  border: 1px solid #a01313ce;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.filter-dropdown option {
+  background-color: rgb(226, 36, 36);
+  color: #60645f;
+}

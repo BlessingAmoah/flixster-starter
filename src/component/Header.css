@@ -1,0 +1,19 @@
+.header {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+  }
+
+  .title img {
+    height: 30px;
+  }
+
+  .title h1 {
+    margin: 0;
+    font-size: 30px;
+  }

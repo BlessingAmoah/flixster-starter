@@ -1,8 +1,10 @@
-
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import Header from './component/Header';
 import MoviesList from './component/MoviesList';
 import SearchBar from './component/SearchBar';
 import ToggleButtons from './component/ToggleButtons';
+import Footer from './component/Footer';
 import './App.css';
 
 function App() {
@@ -10,8 +12,11 @@ function App() {
 
   return (
     <div className="container">
+      <Header />
       <ToggleButtons mode={mode} setMode={setMode} />
       {mode === 'now-playing' ? <MoviesList /> : <SearchBar />}
+      <Footer />
+
     </div>
   );
 }
