@@ -2,15 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './MovieModal.css';
 
+// Modal for a single movie
 const MovieModal = ({ movie, onClose }) => {
   if (!movie) return null;
-
+// modal content
   return (
     <div className="modal-overlay">
       <div className="modal-content">
         <button className="close-button" onClick={onClose}>×</button>
         <div className="modal-header">
-          <h2>{movie.title}</h2>
+          <h2 className="modal-title">{movie.title}</h2>
           {movie.backdrop_path && (
             <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title} />
           )}

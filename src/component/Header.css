@@ -1,7 +1,9 @@
+/* header styling */
 .header {
     color: #fff;
     display: flex;
     justify-content: center;
+    padding: 5px;
   }
 
   .title {

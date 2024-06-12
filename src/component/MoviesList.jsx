@@ -4,6 +4,7 @@ import MovieModal from './MovieModal';
 import './MoviesList.css';
 import FilterDropdown from './FilterDropDown';
 
+// MovieList component
 const MoviesList = () => {
   const [movies, setMovies] = useState([]);
   const [genres, setGenres] = useState([]);
@@ -13,7 +14,11 @@ const MoviesList = () => {
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const [favorites, setFavorites] = useState({});
+  const [watched, setWatched] = useState({});
 
+
+  // Fetch genres on mount
   useEffect(() => {
     const fetchGenres = async () => {
       try {
@@ -30,6 +35,7 @@ const MoviesList = () => {
     fetchGenres();
   }, []);
 
+  // Fetch movies on mount or when filters change
   useEffect(() => {
     const fetchMovies = async () => {
       setLoading(true);
@@ -63,6 +69,7 @@ const MoviesList = () => {
     fetchMovies();
   }, [selectedGenre, selectedReleaseYear, selectedVoteAverage, page]);
 
+  // Handle genre, release year and vote average filters
   const handleGenreSelect = (genre) => {
     setSelectedGenre(genre);
     setPage(1);
@@ -78,6 +85,22 @@ const MoviesList = () => {
     setPage(1);
   };
 
+  // Handle favorite and watched toggle
+  const handleFavoriteToggle = (movieId) => {
+    setFavorites((prevFavorites) => ({
+      ...prevFavorites,
+      [movieId]: !prevFavorites[movieId],
+    }));
+  };
+
+  const handleWatchedToggle = (movieId) => {
+    setWatched((prevWatched) => ({
+      ...prevWatched,
+      [movieId]: !prevWatched[movieId],
+    }));
+  };
+
+  // Handle movie click
   const handleMovieClick = async (movie) => {
     try {
       const response = await fetch(
@@ -100,16 +123,18 @@ const MoviesList = () => {
 
   return (
     <div>
-      <h1>Movies List</h1>
-      <FilterDropdown
+
+      <FilterDropdown      // Genre, release year and vote average filters
         options={genres.map((genre) => ({ value: genre.id, label: genre.name }))}
         onSelect={handleGenreSelect}
       />
       <FilterDropdown
         options={[
+          { value: '2024', label: '2024' },
+          { value: '2023', label: '2023' },
           { value: '2022', label: '2022' },
           { value: '2021', label: '2021' },
-          // Add more years as needed
+          { value: '2020', label: '2020' },
         ]}
         onSelect={handleReleaseYearSelect}
       />
@@ -126,7 +151,10 @@ const MoviesList = () => {
       ) : (
         <div className="movies-list">
           {movies.map((movie) => (
-            <Movie key={movie.id} movie={movie} onClick={() => handleMovieClick(movie)} />
+            <Movie key={movie.id} movie={movie} onClick={() => handleMovieClick(movie)} isFavorite={!!favorites[movie.id]}
+            onFavoriteToggle={handleFavoriteToggle}
+            isWatched={!!watched[movie.id]}
+            onWatchedToggle={handleWatchedToggle} />
           ))}
         </div>
       )}

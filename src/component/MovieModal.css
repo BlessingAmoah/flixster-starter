@@ -1,3 +1,5 @@
+
+/* Modal overlay */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -12,7 +14,7 @@
   }
 
   .modal-content {
-    background: cyan;
+    background: #65463E;
     padding: 20px;
     border-radius: 8px;
     width: 100%;
@@ -34,4 +36,8 @@
 
   .modal-body p {
     margin: 10px;
+  }
+
+  .modal-title{
+    color: #AAD6A0
   }

@@ -1,9 +1,11 @@
+/* movie card styling */
+
 .movie {
-  border: 1px solid black;
+  border: 3px solid black;
   border-radius: 1px;
   align-items: center;
   padding: 5px;
-  background-color: #F3FFB9;
+  background-color: #FBE7C6;
 }
 
 .movie img {
@@ -14,13 +16,48 @@
 
 
 .movie h2 {
-  font-size: 12px;
+  font-size: 12px strong;
   text-align: center;
-  color: #561643;
+  color: #A0E7E5;
+
 }
 
 .movie p {
   font-size: 10px;
-  color: #3C1742;
+  color: #FFAEBC;
   text-align: center;
+}
+
+.movie:hover{
+  border-color: blue;
+}
+
+.modal-body{
+  color: #D2E5D0;
+}
+
+.favorite-button {
+  background: none;
+  cursor: pointer;
+  font-size: 24px;
+  border: none;
+}
+
+.favorite-button.favorite {
+  color: red;
+}
+
+
+.watched-button {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.watched-button.watched {
+  background-color: #cfc;
+  border-color: #8f8;
 }

@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './FilterDropdown.css';
 
+// Dropdown component for filtering
 const FilterDropdown = ({ options, onSelect }) => {
   const handleChange = (e) => {
     const { value } = e.target;
     onSelect(value);
   };
-
+// Dropdown component for filtering
   return (
     <select className="filter-dropdown" onChange={handleChange}>
       <option value="">Select an option</option>
@@ -20,6 +21,7 @@ const FilterDropdown = ({ options, onSelect }) => {
   );
 };
 
+// PropTypes for FilterDropdown
 FilterDropdown.propTypes = {
   options: PropTypes.arrayOf(
     PropTypes.shape({

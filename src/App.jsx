@@ -7,6 +7,7 @@ import ToggleButtons from './component/ToggleButtons';
 import Footer from './component/Footer';
 import './App.css';
 
+// renders the app component
 function App() {
   const [mode, setMode] = useState('now-playing');
 

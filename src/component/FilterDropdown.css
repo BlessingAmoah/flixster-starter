@@ -1,3 +1,5 @@
+
+/* filter dropdown styling */
 .filter-dropdown {
   padding: 3px;
   font-size: 16px;
@@ -6,6 +8,7 @@
   margin: 5px;
 }
 
+/* background color for filter dropdwon */
 .filter-dropdown option {
   background-color: rgb(226, 36, 36);
   color: #60645f;

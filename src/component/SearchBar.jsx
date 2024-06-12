@@ -3,15 +3,17 @@ import { useState } from 'react';
 import Movie from './Movie';
 import './SearchBar.css';
 
+// SearchBar component
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  // Handle search input change
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
-
+// Handle search button click
   const handleSearch = async () => {
     if (searchQuery.trim() === '') return;
     console.log('Searching for:', searchQuery);
@@ -31,6 +33,7 @@ const SearchBar = () => {
     }
   };
 
+  // Render the search bar and results
   return (
     <div>
       <input

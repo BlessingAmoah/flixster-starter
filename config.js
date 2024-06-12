@@ -1,0 +1,1 @@
+process.env.DATABASE_HOSTED_URL
