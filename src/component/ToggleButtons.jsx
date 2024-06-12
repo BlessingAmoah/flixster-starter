@@ -1,8 +1,8 @@
 
 import './ToggleButtons.css';
-
 import PropTypes from 'prop-types';
 
+// ToggleButtons
 const ToggleButtons = ({ mode, setMode }) => {
   return (
     <div className="toggle-buttons">
