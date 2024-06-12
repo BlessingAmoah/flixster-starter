@@ -118,7 +118,6 @@ const MoviesList = () => {
           { value: '7', label: '7 and above' },
           { value: '6', label: '6 and above' },
           { value: '5', label: '5 and above' },
-          // Add more rating ranges as needed
         ]}
         onSelect={handleVoteAverageSelect}
       />
