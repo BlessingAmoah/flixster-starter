@@ -8,7 +8,7 @@ const FilterDropdown = ({ options, onSelect }) => {
     const { value } = e.target;
     onSelect(value);
   };
-// Dropdown component for filtering
+
   return (
     <select className="filter-dropdown" onChange={handleChange}>
       <option value="">Select an option</option>

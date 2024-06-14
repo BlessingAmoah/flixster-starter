@@ -58,7 +58,7 @@ Deployed Application (optional): [Flixster Deployed Site](https://flixster-start
 
 ### Walkthrough Video
 
-[Flixster-starter](https://drive.google.com/file/d/1OrwXOHlU5saK3d7lJMn2MxPrroJfOgl5/view?usp=sharing)
+[Flixster-starter](https://www.loom.com/share/cc70d4d9a032497cb9520431719991c0?sid=8fa55fdc-212c-4742-9035-a5b5f2ce0dd8)
 
 ### Reflection
 
