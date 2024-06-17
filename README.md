@@ -79,5 +79,5 @@ Most of the features went well.
 - I used metamate bunny when I run into problems
 
 ### Shout out
-eT3CVY84x2Fl990ZCwu2Oni6onHs5aRL
+
 A shout out to all TFs & Instructors.
